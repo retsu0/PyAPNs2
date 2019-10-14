@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='apns2',
-    version='0.7.1',
+    version='0.7.2',
     packages=['apns2'],
     install_requires=[
         'hyper>=0.7',
@@ -17,7 +17,7 @@ setup(
             'pytest',
         ],
     },
-    url='https://github.com/Pr0Ger/PyAPNs2',
+    url='https://github.com/retsu0/PyAPNs2',
     license='MIT',
     author='Sergey Petrov',
     author_email='me@pr0ger.prg',

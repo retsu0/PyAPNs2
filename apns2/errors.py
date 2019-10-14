@@ -1,6 +1,3 @@
-from typing import Type, Optional
-
-
 class APNsException(Exception):
     pass
 
@@ -131,7 +128,7 @@ class MethodNotAllowed(InternalException):
 class Unregistered(APNsException):
     """The device token is inactive for the specified topic."""
 
-    def __init__(self, timestamp: Optional[str] = None) -> None:
+    def __init__(self, timestamp=None):
         super(Unregistered, self).__init__()
 
         self.timestamp = timestamp
@@ -167,7 +164,7 @@ class Shutdown(APNsException):
     pass
 
 
-def exception_class_for_reason(reason: str) -> Type[APNsException]:
+def exception_class_for_reason(reason):
     return {
         'BadCollapseId': BadCollapseId,
         'BadDeviceToken': BadDeviceToken,
